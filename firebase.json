@@ -2,7 +2,7 @@
   "functions": [
     {
       "source": "svelte-app/functions",
-      "codebase": "svelte-app",
+      "codebase": "sveltekit",
       "ignore": [
         "node_modules",
         ".git",
@@ -15,7 +15,7 @@
     },
     {
       "source": "functions",
-      "codebase": "general-functions",
+      "codebase": "default",
       "ignore": [
         "node_modules",
         ".git",

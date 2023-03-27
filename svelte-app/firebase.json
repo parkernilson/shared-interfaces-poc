@@ -1,7 +1,7 @@
 {
   "functions": {
-    "source": "sveltekit-functions",
-    "codebase": "sveltekit-functions",
+    "source": "functions",
+    "codebase": "sveltekit",
     "ignore": [
       "node_modules",
       ".git",

@@ -10,10 +10,10 @@ const shared: SharedType = {
 // // Start writing functions
 // // https://firebase.google.com/docs/functions/typescript
 //
-export const helloWorld = functions.https.onRequest((request, response) => {
+export const sharedWorld = functions.https.onRequest((request, response) => {
 
     if (shared.shared) {
-        response.send("Hello from Firebase!");
+        response.send("Hello from shared Firebase!");
     } else {
         response.send("Not true value")
     }
