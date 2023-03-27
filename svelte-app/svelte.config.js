@@ -8,10 +8,7 @@ const config = {
 	preprocess: vitePreprocess(),
 
 	kit: {
-		adapter: firebase(),
-		alias: {
-			'shared': './shared'
-		}
+		adapter: firebase()
 	}
 };
 
