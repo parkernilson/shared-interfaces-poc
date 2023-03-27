@@ -1,22 +1,37 @@
 {
-  "functions": {
-    "source": "functions",
-    "codebase": "default",
-    "ignore": [
-      "node_modules",
-      ".git",
-      "firebase-debug.log",
-      "firebase-debug.*.log"
-    ],
-    "predeploy": [
-      "shx rm -rf \"$RESOURCE_DIR/src/shared\"",
-      "shx cp -R \"$PROJECT_DIR/shared/.\" \"$RESOURCE_DIR/src/shared\"",
-      "npm --prefix \"$RESOURCE_DIR\" run build"
-    ],
-    "postdeploy": [
-      "shx rm -rf \"$RESOURCE_DIR/src/shared\""
-    ]
-  },
+  "functions": [
+    {
+      "source": "svelte-app/functions",
+      "codebase": "svelte-app",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log"
+      ],
+      "predeploy": [
+        "npm --prefix \"$RESOURCE_DIR\" run build"
+      ]
+    },
+    {
+      "source": "functions",
+      "codebase": "general-functions",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log"
+      ],
+      "predeploy": [
+        "shx rm -rf \"$RESOURCE_DIR/src/shared\"",
+        "shx cp -R \"$PROJECT_DIR/shared/.\" \"$RESOURCE_DIR/src/shared\"",
+        "npm --prefix \"$RESOURCE_DIR\" run build"
+      ],
+      "postdeploy": [
+        "shx rm -rf \"$RESOURCE_DIR/src/shared\""
+      ]
+    }
+  ],
   "hosting": {
     "public": "svelte-app/public",
     "ignore": [
