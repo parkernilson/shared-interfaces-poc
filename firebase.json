@@ -18,7 +18,7 @@
     ]
   },
   "hosting": {
-    "public": "public",
+    "public": "svelte-app/public",
     "ignore": [
       "firebase.json",
       "**/.*",
